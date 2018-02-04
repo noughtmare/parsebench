@@ -1,0 +1,22 @@
+name:                parsebench
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              Jaro Reinders
+maintainer:          jaro.reinders@gmail.com
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable parsebench
+  main-is:             Main.hs
+  other-modules:       UUParser
+                     , AttoParser
+  build-depends:       base >=4.10 && <4.11
+                     , uu-parsinglib >= 2.9.1.1 && < 3
+                     , attoparsec >= 0.13.2.2 && < 0.14
+                     , criterion
+                     , bytestring
+                     , deepseq
+  default-language:    Haskell2010
+  ghc-options: -O2
